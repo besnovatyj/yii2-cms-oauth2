@@ -1,0 +1,10 @@
+/vendor/
+composer.lock
+
+# OAuth2-ключи НИКОГДА не коммитим — генерируются при установке (docs/generate-keys.sh)
+*.key
+*.pem
+
+# Служебное
+.idea/
+*.log

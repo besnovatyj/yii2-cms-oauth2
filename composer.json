@@ -1,0 +1,53 @@
+{
+  "name": "besnovatyj/yii2-cms-oauth2",
+  "description": "OAuth2-сервер (интеграция league/oauth2-server) для REST-слоя Yii2 CMS: выдача и валидация Bearer-токенов.",
+  "version": "1.0.0",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Besnovatyj",
+      "email": "your-email@example.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "extra": {
+    "moduleClass": "Besnovatyj\\Oauth2\\Module",
+    "moduleId": "Oauth2",
+    "bescms": { "kind": "module" }
+  },
+  "keywords": [
+    "yii2",
+    "oauth2",
+    "rest",
+    "api",
+    "cms"
+  ],
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true
+    },
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "require": {
+    "besnovatyj/yii2-cms-kernel": "^1.0",
+    "besnovatyj/yii2-cms-contracts": "^1.0",
+    "php": ">=8.4",
+    "yiisoft/yii2": "~2.0.0",
+    "league/oauth2-server": "^9.0",
+    "nyholm/psr7": "^1.8",
+    "nyholm/psr7-server": "^1.1",
+    "psr/http-message": "^1.1 || ^2.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "autoload": {
+    "psr-4": {
+      "Besnovatyj\\Oauth2\\": "src/"
+    }
+  }
+}
