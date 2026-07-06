@@ -1,7 +1,6 @@
 {
   "name": "besnovatyj/yii2-cms-oauth2",
   "description": "OAuth2-сервер (интеграция league/oauth2-server) для REST-слоя Yii2 CMS: выдача и валидация Bearer-токенов.",
-  "version": "1.0.0",
   "type": "yii2-extension",
   "license": "MIT",
   "authors": [
