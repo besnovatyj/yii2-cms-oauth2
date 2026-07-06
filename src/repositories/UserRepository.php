@@ -13,7 +13,7 @@ use Besnovatyj\Oauth2\bridge\UserEntity;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Entities\UserEntityInterface;
 use League\OAuth2\Server\Repositories\UserRepositoryInterface;
-use modules\user\repositories\UserReadRepository;
+use Besnovatyj\User\repositories\UserReadRepository;
 use Yii;
 
 /**

@@ -56,17 +56,17 @@ composer require besnovatyj/yii2-cms-oauth2
 ## ⚠️ Остаточная зависимость от модуля User
 
 `src/repositories/UserRepository.php` (реализация «password grant») пока ссылается напрямую на
-`modules\user\repositories\UserReadRepository` — резолвится через DI-контейнер
+`Besnovatyj\User\repositories\UserReadRepository` — резолвится через DI-контейнер
 (`Yii::$container->get(...)`). Это единственная точка связи с ядром/модулем User.
 
 **План развязки** (см. `docs/MIGRATION-NOTE.md` и общий отчёт `GITHUB_MIGRATION_READINESS.md`, раздел B6):
 инвертировать через контракт `UserProvider` в `yii2-cms-contracts` (метод вида
 `findActiveByUsername()` / `validateCredentials()`), либо перенести этот репозиторий в пакет
 `besnovatyj/yii2-cms-user` при его выделении. До этого пакет корректно работает в составе
-приложения, где `modules\user` доступен, но **автономно (без User) собирается, но не функционирует
+приложения, где `Besnovatyj\User` доступен, но **автономно (без User) собирается, но не функционирует
 password-grant**.
 
-Тот же residual-момент в dev-скрипте `docs/dev/create-test-user.php` (`modules\user\entities\User`).
+Тот же residual-момент в dev-скрипте `docs/dev/create-test-user.php` (`Besnovatyj\User\entities\User`).
 
 ## Зависимости
 

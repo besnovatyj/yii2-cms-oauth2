@@ -12,7 +12,7 @@
  * ВНИМАНИЕ: справочный dev-скрипт, перенесён из app/common/components/oauth2/ как есть.
  * Пути в require ниже указывают на корень приложения относительно ПРЕЖНЕГО расположения
  * (app/common/components/oauth2/) — при запуске из пакета скорректируйте их под своё окружение.
- * Также содержит прямую ссылку на modules\user\entities\User (см. readme.md, раздел про User).
+ * Также содержит прямую ссылку на Besnovatyj\User\entities\User (см. readme.md, раздел про User).
  */
 
 require __DIR__ . '/../../../vendor/autoload.php';
@@ -28,7 +28,7 @@ $config = yii\helpers\ArrayHelper::merge(
 
 $application = new yii\console\Application($config);
 
-use modules\user\entities\User;
+use Besnovatyj\User\entities\User;
 
 $username = 'oauth-test';
 $password = '123456';
